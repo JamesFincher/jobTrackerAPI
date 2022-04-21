@@ -1,8 +1,7 @@
 const mongoose = require("mongoose");
-
 const JobSchema = mongoose.Schema({
   jobTitle: String,
-  id: Number,
+  id: { type: String, default: mongoose.Types.ObjectId },
   JobLink: String,
   researched: Boolean,
   notes: String,
